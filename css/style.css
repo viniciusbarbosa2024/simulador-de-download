@@ -7,7 +7,7 @@
 header {
     height: 120px;
 
-    background-color: rgb(0, 89, 255);
+    background-color: rgb(2, 58, 161);
 }
 
 main {
@@ -25,6 +25,42 @@ main {
     padding: 10px;
 
     border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+}
+
+.archive .titleAndStatus {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.archive .titleAndStatus .title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.archive .titleAndStatus .statusIndicators {
+    display: flex;
+    gap: 10px;
+
+    flex-basis: 15px;
+    width: 400px;
+}
+
+.archive .titleAndStatus .statusIndicators .statusBarContainer {
+    flex-basis: 320px;
+    
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.archive .titleAndStatus .statusIndicators .statusBarContainer .statusBar {
+    height: 15px;
+    width: 50%;
+
+    border-radius: 8px;
+
+    background-color: rgb(2, 113, 177);
 }
 
 .archive .conteinerButton {
