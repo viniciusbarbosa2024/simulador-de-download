@@ -12,9 +12,11 @@ const statusBar = [
     document.getElementsByClassName('statusBar')[2]
 ] 
 
-const percentage1 = document.getElementById('percentage1')
-const percentage2 = document.getElementById('percentage2')
-const percentage3 = document.getElementById('percentage3')
+const percentage = [
+    document.getElementsByClassName('percentage')[0],
+    document.getElementsByClassName('percentage')[1],
+    document.getElementsByClassName('percentage')[2]
+]
 
 let percentageValue = 0
 
@@ -26,7 +28,7 @@ downloadButton[2].addEventListener('click',startDownload)
 
 function updateStatus() {
     percentageValue+=10
-    percentage1.innerHTML = `${percentageValue}%`
+    percentage[0].innerHTML = `${percentageValue}%`
     statusBar[0].style.width = `${percentageValue}%`
 }
 
