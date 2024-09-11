@@ -62,6 +62,8 @@ function startDownload(id) {
         atualStatus[id].innerHTML = result
         clearInterval(updateStatusFunction)
     })
+
+    atualStatus[id].innerHTML = 'Em andamento'
     
     const updateStatusFunction = setInterval(() => updateStatus(id),1000)
 }
