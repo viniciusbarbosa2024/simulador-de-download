@@ -1,3 +1,9 @@
+const downloadButton = [
+    document.getElementsByClassName('downloadButton')[0],
+    document.getElementsByClassName('downloadButton')[1],
+    document.getElementsByClassName('downloadButton')[2]
+]
+
 const statusIndicators = [
     document.getElementsByClassName('statusIndicators')[0],
     document.getElementsByClassName('statusIndicators')[1],
@@ -20,18 +26,6 @@ const percentage = [
     document.getElementsByClassName('percentage')[0],
     document.getElementsByClassName('percentage')[1],
     document.getElementsByClassName('percentage')[2]
-]
-
-const conteinerButton = [
-    document.getElementsByClassName('conteinerButton')[0],
-    document.getElementsByClassName('conteinerButton')[1],
-    document.getElementsByClassName('conteinerButton')[2]
-]
-
-const downloadButton = [
-    document.getElementsByClassName('downloadButton')[0],
-    document.getElementsByClassName('downloadButton')[1],
-    document.getElementsByClassName('downloadButton')[2]
 ]
 
 let percentageValue = [
@@ -69,19 +63,7 @@ function startDownload(id) {
         clearInterval(updateStatusFunction)
     })
 
-    const pauseButton = document.createElement('button')
-    pauseButton.classList.add('pauseButton')
-
-    const imgPauseButton = document.createElement('img')
-    imgPauseButton.setAttribute('src','../img/icon-pause.png')
-
-    conteinerButton[id].appendChild(pauseButton)
-    
-    conteinerButton[id].children[1].appendChild(imgPauseButton)
-
     atualStatus[id].innerHTML = 'Em andamento'
     
     const updateStatusFunction = setInterval(() => updateStatus(id),1000)
-
-    downloadButton[id].remove()
 }
