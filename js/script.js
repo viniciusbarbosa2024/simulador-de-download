@@ -4,6 +4,12 @@ const downloadButton = [
     document.getElementsByClassName('downloadButton')[2]
 ]
 
+const statusIndicators = [
+    document.getElementsByClassName('statusIndicators')[0],
+    document.getElementsByClassName('statusIndicators')[1],
+    document.getElementsByClassName('statusIndicators')[2]
+]
+
 const statusIndicators1 = document.getElementById('statusIndicators1')
 
 const statusBar = [
@@ -45,7 +51,7 @@ function startDownload() {
     })
     
     promise.then((result)=> {
-        statusIndicators1.innerHTML = result
+        statusIndicators[0].innerHTML = result
         clearInterval(updateStatusFunction)
     })
     
