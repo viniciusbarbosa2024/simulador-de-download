@@ -47,7 +47,7 @@ main {
     width: 400px;
 }
 
-.archive .titleAndStatus .statusIndicators .status {
+.archive .titleAndStatus .statusIndicators .atualStatus {
     flex-basis: 100%;
 }
 
