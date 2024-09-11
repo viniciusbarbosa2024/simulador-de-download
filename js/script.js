@@ -26,20 +26,20 @@ const percentage = [
 
 let percentageValue = 0
 
-downloadButton[0].addEventListener('click',startDownload)
-downloadButton[1].addEventListener('click',startDownload)
-downloadButton[2].addEventListener('click',startDownload)
+downloadButton[0].addEventListener('click',() => startDownload(0))
+downloadButton[1].addEventListener('click',() => startDownload(1))
+downloadButton[2].addEventListener('click',() => startDownload(2))
 
 
 
-function updateStatus() {
+function updateStatus(id) {
     percentageValue+=10
-    percentage[0].innerHTML = `${percentageValue}%`
-    statusBar[0].style.width = `${percentageValue}%`
+    percentage[id].innerHTML = `${percentageValue}%`
+    statusBar[id].style.width = `${percentageValue}%`
 }
 
 
-function startDownload() {
+function startDownload(id) {
     const promise = new Promise(resolve => {
         setTimeout(()=> {
             if (percentageValue >= 100) {
@@ -51,9 +51,9 @@ function startDownload() {
     })
     
     promise.then((result)=> {
-        statusIndicators[0].innerHTML = result
+        statusIndicators[id].innerHTML = result
         clearInterval(updateStatusFunction)
     })
     
-    const updateStatusFunction = setInterval(updateStatus,1000)
+    const updateStatusFunction = setInterval(() => updateStatus(id),1000)
 }
