@@ -30,7 +30,7 @@ main {
 .archive .titleAndStatus {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 }
 
 .archive .titleAndStatus .title {
@@ -40,10 +40,15 @@ main {
 
 .archive .titleAndStatus .statusIndicators {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 
     flex-basis: 15px;
     width: 400px;
+}
+
+.archive .titleAndStatus .statusIndicators .status {
+    flex-basis: 100%;
 }
 
 .archive .titleAndStatus .statusIndicators .statusBarContainer {
