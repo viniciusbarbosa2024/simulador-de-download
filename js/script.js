@@ -1,6 +1,8 @@
-const button1 = document.getElementById('button1')
-const button2 = document.getElementById('button2')
-const button3 = document.getElementById('button3')
+const downloadButton = [
+    document.getElementsByClassName('downloadButton')[0],
+    document.getElementsByClassName('downloadButton')[1],
+    document.getElementsByClassName('downloadButton')[2]
+]
 
 const statusIndicators1 = document.getElementById('statusIndicators1')
 
@@ -15,9 +17,9 @@ const percentage3 = document.getElementById('percentage3')
 
 let percentageValue = 0
 
-button1.addEventListener('click',startDownload)
-button2.addEventListener('click',startDownload)
-button3.addEventListener('click',startDownload)
+downloadButton[0].addEventListener('click',startDownload)
+downloadButton[1].addEventListener('click',startDownload)
+downloadButton[2].addEventListener('click',startDownload)
 
 
 
